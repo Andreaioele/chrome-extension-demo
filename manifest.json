@@ -1,0 +1,11 @@
+{
+  "name": "Ferrara weather",
+  "version": "1.0.0",
+  "description": "This is an extension to look up weather of Ferrara",
+  "manifest_version": 3,
+  "author": "Andrea Ioele",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Ferrara weather"
+  }
+}
