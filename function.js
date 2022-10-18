@@ -1,6 +1,17 @@
-const foo = async () => {
+$('#submit').on('click', function (){
+    submitForm();
+})
+
+function submitForm(){
+    let form = document.querySelector('#my-form');
+    let data = new FormData(form);
+    foo(data);
+}
+function foo(data){
+    // Get the form
+
     // do something
-    const city= 'ferrara';
+    const city = data.get('city');
     const options = {
         method: 'GET',
         headers: {
@@ -8,13 +19,17 @@ const foo = async () => {
             'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
         }
     };
-    const res = await fetch('https://weatherapi-com.p.rapidapi.com/current.json?q='+city, options)
-    const record = await res.json();
+    fetch('https://weatherapi-com.p.rapidapi.com/current.json?q='+city, options).then(response => response.json())
+        .then(response => {
+            console.log(response.current.temp_c);
+            document.getElementById('results').innerHTML = response.current.temp_c;
+        })
+        .catch(err => console.error(err));
 
-    console.log(record);
-    document.getElementById('translate').innerHTML = record.current.temp_c;
+
+
 
 }
 
 
-foo();
+
