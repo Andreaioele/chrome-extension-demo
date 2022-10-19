@@ -1,6 +1,7 @@
-$('#submit').on('click', function (){
-    submitForm();
-})
+
+
+const element = document.getElementById("submit");
+element.addEventListener("click", submitForm);
 
 function submitForm(){
     let form = document.querySelector('#my-form');
