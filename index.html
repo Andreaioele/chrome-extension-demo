@@ -3,15 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="container">
+    <div class="widget">
+        <div class="details">
+            <div class="precipitation">Ferrara</div>
+
+            <div class="temperature" id="staticResults"></div>
+            <div class="summary">
+                <p class="summaryText" id="conditionText"></p>
+            </div>
+            <div class="precipitation" id="humidity"></div>
+            <div class="wind" id="precip"></div>
+        </div>
+        <div class="pictoBackdrop"></div>
+        <div class="pictoFrame"></div>
+        <div class="pictoCloudBig"></div>
+        <div class="pictoCloudFill"></div>
+        <div class="pictoCloudSmall"></div>
+        <!--
+        <div class="iconCloudBig"></div>
+        <div class="iconCloudFill"></div>
+        <div class="iconCloudSmall"></div>
+        -->
+    </div>
+</div>
+
+<!--
+
+
 <div style="min-height: 80px">
+    <label>
+        Ferrara Weather:
+    </label><p id="staticResults"></p>
     <form id="my-form">
+        <label>Write city name to show his temperature</label><br>
         <input type="text" name="city" placeholder="City">
         <button type="button" id="submit">Weather</button>
     </form>
     <label>Temp: </label><p id="results"></p>
 </div>
+
+-->
 <script src="function.js" type="application/javascript"></script>
 </body>
 </html>
